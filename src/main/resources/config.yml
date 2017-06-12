@@ -1,0 +1,13 @@
+nexmoGateway: "https://rest.nexmo.com/sms/json"
+server:
+  applicationConnectors:
+    - type: http
+      port: 7090
+  adminConnectors:
+    - type: http
+      port: 7091
+smsRequest:
+  nexmoRequest:
+    api_key: 286f8b1e
+    api_secret: 3015d323920f7138
+    from: 441632960961
