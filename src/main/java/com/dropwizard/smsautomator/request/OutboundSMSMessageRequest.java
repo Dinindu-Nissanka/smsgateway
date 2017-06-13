@@ -16,7 +16,7 @@ public class OutboundSMSMessageRequest {
     private String senderAddress;
 
     @JsonProperty
-    private OutboundSMSTextMessage outboundOutboundSMSTextMessage;
+    private OutboundSMSTextMessage outboundSMSTextMessage;
 
     @JsonProperty
     private String clientCorrelator;
@@ -44,12 +44,12 @@ public class OutboundSMSMessageRequest {
         this.senderAddress = senderAddress;
     }
 
-    public OutboundSMSTextMessage getOutboundOutboundSMSTextMessage() {
-        return outboundOutboundSMSTextMessage;
+    public OutboundSMSTextMessage getOutboundSMSTextMessage() {
+        return outboundSMSTextMessage;
     }
 
-    public void setOutboundOutboundSMSTextMessage(OutboundSMSTextMessage outboundOutboundSMSTextMessage) {
-        this.outboundOutboundSMSTextMessage = outboundOutboundSMSTextMessage;
+    public void setOutboundSMSTextMessage(OutboundSMSTextMessage outboundSMSTextMessage) {
+        this.outboundSMSTextMessage = outboundSMSTextMessage;
     }
 
     public String getClientCorrelator() {

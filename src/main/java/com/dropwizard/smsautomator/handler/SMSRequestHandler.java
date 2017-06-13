@@ -37,13 +37,13 @@ public class SMSRequestHandler {
 
     public OutboundSMSMessageRequest handleSMSRequest(SMSReceiptRequest smsReceiptRequest) throws JsonProcessingException, UnsupportedEncodingException {
 
-        DeliveryInfoList deliveryInfoList = this.sendSMSToMultipleAddresses(smsReceiptRequest.getOutboundSMSMessageRequest().getAddress(),smsReceiptRequest.getOutboundSMSMessageRequest().getOutboundOutboundSMSTextMessage().getMessage());
+        DeliveryInfoList deliveryInfoList = this.sendSMSToMultipleAddresses(smsReceiptRequest.getOutboundSMSMessageRequest().getAddress(),smsReceiptRequest.getOutboundSMSMessageRequest().getOutboundSMSTextMessage().getMessage());
 
         OutboundSMSMessageRequest outboundSMSMessageRequest = new OutboundSMSMessageRequest();
         outboundSMSMessageRequest.setAddress(smsReceiptRequest.getOutboundSMSMessageRequest().getAddress());
         outboundSMSMessageRequest.setClientCorrelator(smsReceiptRequest.getOutboundSMSMessageRequest().getClientCorrelator());
         outboundSMSMessageRequest.setDeliveryInfoList(deliveryInfoList);
-        outboundSMSMessageRequest.setOutboundSMSTextMessage(smsReceiptRequest.getOutboundSMSMessageRequest().getOutboundOutboundSMSTextMessage());
+        outboundSMSMessageRequest.setOutboundSMSTextMessage(smsReceiptRequest.getOutboundSMSMessageRequest().getOutboundSMSTextMessage());
         outboundSMSMessageRequest.setReceiptRequest(smsReceiptRequest.getOutboundSMSMessageRequest().getReceiptRequest());
         outboundSMSMessageRequest.setResourceURL("http://localhost:8181/smsmessaging/v1_2/outbound/tel:+7878/requests/505812");
         outboundSMSMessageRequest.setSenderAddress(smsReceiptRequest.getOutboundSMSMessageRequest().getSenderAddress());

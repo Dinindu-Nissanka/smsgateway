@@ -9,3 +9,5 @@ server:
 smsRequest:
   nexmoRequest:
     from: 441632960961
+    api_key: 286f8b1e
+    api_secret: 3015d323920f7138
