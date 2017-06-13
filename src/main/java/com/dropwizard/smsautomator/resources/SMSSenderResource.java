@@ -16,7 +16,7 @@ import java.io.IOException;
  */
 
 
-@Path("/sendsms")
+@Path("/nexmo")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class SMSSenderResource {
@@ -27,6 +27,7 @@ public class SMSSenderResource {
         this.configuration = configuration;
     }
 
+    @Path("/sendsms")
     @POST
     public Response sendSMS(SMSReceiptRequest SMSReceiptRequest) throws IOException {
 
