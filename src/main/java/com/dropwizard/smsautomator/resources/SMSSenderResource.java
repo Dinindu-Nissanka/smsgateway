@@ -30,6 +30,8 @@ public class SMSSenderResource {
     @POST
     public Response sendSMS(SMSReceiptRequest SMSReceiptRequest) throws IOException {
 
+        System.out.println(">>>>>>>>>>>>>>>>."+SMSReceiptRequest.getOutboundSMSMessageRequest().getSenderName());
+        System.out.println(">>>>>>>>>>>>>>>>."+ SMSReceiptRequest.getOutboundSMSMessageRequest().getAddress().get(0));
         SMSRequestHandler handler = new SMSRequestHandler(configuration);
         OutboundSMSMessageRequest outboundSMSMessageRequest = handler.handleSMSRequest(SMSReceiptRequest);
         return Response
